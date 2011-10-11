@@ -1,0 +1,4 @@
+This is some basic php code that checks a pachube data feed for data about a room's
+power consumption, looks to see if it's above a threshhold, and responds with a
+a simple html page telling you if anyone's in the room (and using an above-baseline amount of power)
+

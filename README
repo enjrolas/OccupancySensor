@@ -1,0 +1,14 @@
+This is some basic php code that checks a pachube data feed for data about a room's
+power consumption, looks to see if it's above a threshhold, and responds with a
+a simple html page telling you if anyone's in the room (and using an above-baseline amount of power)
+
+We're getting our power data via a current sensor that Julian Lee clipped around
+the power mains in the building, and he put in an arduino with a ethernet shield
+to send the data periodically to pachube.
+
+Here's the tech specs:
+1) Power consumption of the space, based on the design from openenergymonitor.org, using a SCT-13-000 clip-on CT sensor attached to the main fuse box. (Code courtesy of openenergymonitor.org) 
+2) Temperature and humidity of the space, using a DHT11 digital temperature sensor. (Code courtesy of sheepdogguides.com)
+
+And here's our pachube feed:
+https://pachube.com/feeds/34432
