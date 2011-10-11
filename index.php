@@ -1,13 +1,8 @@
 <?php
-require_once("connect.php");
-
-$query="select * from threshhold";
-$result=mysql_query($query) or die(mysql_error());
-$row=mysql_fetch_array($result);
-$threshhold=$row['threshhold'];
-// set url for data
+$threshhold=200;  //occupancy threshhold, in watts
+// set url for pachube data feed
 $url ="http://api.pachube.com/v2/feeds/34432/datastreams/0.json";
-$key="1uSky2fDqfMfbR0LETrHEuHRicLWCJ0JiYcND5dD6zc";
+$key="1uSky2fDqfMfbR0LETrHEuHRicLWCJ0JiYcND5dD6zc";  //my user key, because pachube asks for it.  
 // get data using curl coz "get_file_contents" throws error on some servers !
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL,$url);
